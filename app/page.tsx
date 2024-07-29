@@ -1,5 +1,10 @@
 'use client';
-
+// Bu sayfada compile hataları var onlar düzeltilmeli. Line-27, Line-37 Line-66'da.
+//Ayrıca Product ve Category type ı için interface yazılmalı. Model klasör açıp types.ts dosyası içine export olarak yazılabilir.
+// kullandığın api servisinde categoryleri çekmek için de bir endpoint var. Ürünlerin içinden almak yerine categoryleri de api den almayı dene. API dökümanını inceleyebilirsin.
+// aynı şekilde filtreleme işi için de kullandığın serviste ürünleri categorylerine göre çekmek için de bir endpoint var onu da entegre edebilrsin.
+// bu bahsettiğim apileri useEffect için de kullanabilirsin. Gerektiği yerde doğru şekilde kullanırsan çok faydalı bir hook.
+// Bu yazdıklarımı bir yapmayı dene daha sonrasına bakalım. İlk review için gayet yeterli duruyor. Eline sağlık.
 import { useState, useEffect, SetStateAction } from "react";
 import ProductCard from "./components/ProductCard/page";
 

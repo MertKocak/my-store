@@ -1,3 +1,5 @@
+//Line-17, Line-23, 
+
 import Link from 'next/link';
 import Image from "next/image";
 import { use } from 'react';
@@ -12,13 +14,13 @@ interface ProductProps {
 }
 
 async function fetchProduct(id: number): Promise<ProductProps> { //ProductCard'tan gönderilen id ile ürüne özel veri çekme
-  const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const res = await fetch(`https://fakestoreapi.com/products/${id}`); // api çağrısı için axios kullanabilirsin piyasada o kullanılıyo çünkü
   const product = await res.json();
   return product;
 }
 
-const ProductPage = ({ params }: { params: { id: number } }) => {
-  const product = use(fetchProduct(params.id));
+const ProductPage = ({ params }: { params: { id: number } }) => { //
+  const product = use(fetchProduct(params.id)); //Burada api çağrısı useEffect içinde yapılmalı.
 
   return ( // temel bir detay sayfası tasarımı
       <div className='flex space-x-8 px-8'>
